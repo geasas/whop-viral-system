@@ -529,3 +529,78 @@
 - **ملاحظة تكاملية:** كل المهام الـ 8 في المرحلة 1 (1-a إلى 1-h) مكتملة. النظام الآن جاهز conceptual للتنفيذ العملي في المرحلة 2. الـ 14 سكربت في `scripts/` + 8 ملفات في `research/` + نظام الـ 7 عقول الموثَّق في `08_strategic_mind_activation.md` = foundation متكامل لأي AI agent (Claude, GLM, GPT, Cursor) يأخذ المشروع للإنتاج الفعلي.
 
 
+
+---
+
+## المرحلة 2 — بناء المستودع المتكامل + الرفع لـ GitHub (مكتمل)
+
+### Task ID: 2-final
+**Agent:** Main Agent (All Minds Synthesis)
+**Task:** بناء المستودع الكامل + إنشائه على GitHub + رفع كل الملفات.
+
+### Work Log:
+- ✅ تجميع كل مخرجات المرحلة 1 (8 ملفات بحثية + 14 سكربت + مراجع) في `/home/z/my-project/whop-viral-system/`.
+- ✅ إنشاء بنية المستودع الكاملة: docs/ + scripts/ + minds/ + references/ + strategic_mind/ + whop_kit/.
+- ✅ كتابة الملفات الأساسية (11 ملف):
+  - `MASTER.md` — نقطة الدخول لأي AI agent (90 ثانية لـ onboard).
+  - `README.md` — نظرة عامة سريعة.
+  - `SYSTEM.md` — البنية + التشغيل (10 طبقات + state management + cron).
+  - `WORKFLOW.md` — السير اليومي تفصيلياً (06:00-22:00 UTC).
+  - `AGENTS.md` — الـ 7 sub-agents + prompts كاملة + Multi-Mind Synthesis.
+  - `TOOLS.md` — الأدوات + setup (12 قسم).
+  - `STRATEGY.md` — خطة 90 يوم + 12 شهر + KPIs + fallback.
+  - `ETHICS.md` — الإطار الحلالي (5 خطوط حمراء + checklist + فتاوى).
+  - `API_CONTRACT.md` — Whop/TikTok/IG/YT APIs كاملة.
+  - `LICENSE` — MIT + ethical use clause.
+  - `.gitignore` + `quick_start.sh` + `.env.template`.
+- ✅ كتابة ملفات الـ 7 عقول في `minds/`:
+  - sima_yi.md + cao_cao.md + guo_jia.md + liu_bei.md + dong_zhuo.md + lu_bu.md + yuan_fang.md.
+- ✅ نسخ المراجع الأصلية:
+  - `references/strategic_mind/` — الـ 16 طبقة (8.2MB).
+  - `references/whop_kit/` — الـ 22 ماستر + الخطة الأصلية (3.4MB).
+  - `references/session-ses_f7a3.md` — محادثة Claude الأصلية.
+- ✅ تثبيت Git + commit (1 commit، رسالة وصفية بالعربي + الإنجليزي).
+- ✅ إنشاء مستودع GitHub جديد عبر API: `https://github.com/geasas/whop-viral-system`.
+- ✅ رفع الكود كامل (`git push -u origin main`) — نجح في المرة الأولى.
+- ✅ التحقق: كل الملفات موجودة + المستودع public.
+
+### Stage Summary:
+- **المستودع النهائي:** https://github.com/geasas/whop-viral-system
+- **الحجم الكلي:** ~13MB (يشمل STRATEGIC_MIND الكامل 8.2MB + 22 ماسترز 3.4MB).
+- **عدد الملفات:** 11 ملف MD أساسي + 8 ملفات بحث + 17 سكربت + 7 ملفات عقول + مراجع.
+- **Languages:** عربي (رئيسي) + English (للـ API + technical terms).
+- **الهدف:** أي AI agent (Claude/GLM/GPT/Cursor) يقرأ `MASTER.md` فقط يستطيع تشغيل النظام خلال 90 ثانية.
+- **النظام جاهز للتسليم.** المهمة اكتملت بنجاح.
+
+### Next Actions for User:
+1. **افتح الرابط**: https://github.com/geasas/whop-viral-system
+2. **اقرأ `MASTER.md` أولاً** — يشرح كل شيء في 90 ثانية.
+3. **استنسخ المستودع محلياً**: `git clone https://github.com/geasas/whop-viral-system.git`
+4. **املأ الـ credentials** في `.env` (TikTok/IG/YT/Whop API tokens).
+5. **شغّل `bash quick_start.sh`** للتثبيت.
+6. **ابدأ بـ Workflow اليومي** — راجع `WORKFLOW.md`.
+
+### ⚠️ تحذير أمني مهم:
+التوكن الذي استخدمته لإنشاء المستودع كان مكشوفاً في محادثتنا. يجب عليك:
+1. **تسجيل الدخول لـ GitHub**.
+2. الذهاب إلى Settings → Developer settings → Personal access tokens.
+3. **تعطيل (Revoke) التوكن الحالي فوراً**.
+4. **إنشاء توكن جديد سري** ولا تشاركه مع أحد أو في أي محادثة.
+5. تحديث الـ git remote لإزالة التوكن من URL:
+   ```bash
+   cd whop-viral-system
+   git remote set-url origin https://github.com/geasas/whop-viral-system.git
+   ```
+
+### الكلمة الأخيرة:
+المهمة اكتملت بالكامل:
+- ✅ تحميل وفهم ملفات `STRATEGIC_MIND_COMPLETE.zip` + `WHOP_GLM_رفع_جاهز.zip`.
+- ✅ فهم نظام "تفعيل العقول" — يعمل بـ routing logic (7 عقول رئيسية بحسب نوع القرار).
+- ✅ تشغيل 7 sub-agents بالتوازي للبحث المتعمق في: Whop، viral editing، TikTok algorithm، IG algorithm، YT algorithm، Halal framework، Open-source stack، Strategic mind activation.
+- ✅ إنتاج ~480KB / 7000+ سطر بحث منظم بـ 34+ مصدر موثّق.
+- ✅ بناء 14 سكربت Python/Bash قابلة للتشغيل (كلها PASS في smoke tests).
+- ✅ بناء نظام متكامل يضم كل المراجع الأصلية (strategic-advisor + whop + session-ses_f7a3).
+- ✅ إنشاء مستودع GitHub public جديد: https://github.com/geasas/whop-viral-system
+- ✅ رفع الكود الكامل + التحقق من النجاح.
+
+النظام جاهز للاستخدام. 🎬🧠💰
