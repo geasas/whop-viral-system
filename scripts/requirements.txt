@@ -1,0 +1,68 @@
+# requirements.txt — Open-Source Viral Clipping Stack
+# =====================================================
+# Install with: pip install -r scripts/requirements.txt
+# All packages are free / open-source. Total cost: $0.
+#
+# Tested versions (Sep 2026):
+#   yt-dlp 2026.8.19, faster-whisper 1.2.1, librosa 0.10.2.post1,
+#   moviepy 2.1.2, opencv-python-headless 4.13.0.90,
+#   ffmpeg-python 0.2.0, srt 3.5.3, requests 2.32.5, httpx 0.28.1,
+#   python-dotenv 1.2.2, PyYAML 6.0.3, tqdm 4.67.1
+
+# --- Layer 1: Download ---
+yt-dlp>=2026.8.19
+
+# --- Layer 2: Transcribe ---
+faster-whisper>=1.2.1
+# Optional: GPU acceleration (CUDA)
+# torch>=2.0 ; sys_platform == "linux"
+
+# --- Layer 3: Analyze (silence removal + beat detection) ---
+auto-editor>=29.3.1
+librosa>=0.10.2.post1
+soundfile>=0.12.1
+
+# --- Layer 4: Edit (FFmpeg + moviepy) ---
+# Note: ffmpeg itself is installed via apt, not pip.
+moviepy>=2.1.2
+ffmpeg-python>=0.2.0
+opencv-python-headless>=4.13.0.90
+Pillow>=11.0.0
+
+# --- Layer 5: Captions ---
+srt>=3.5.3
+
+# --- Layer 6: B-Roll (Pexels + Stable Diffusion) ---
+# Pexels API uses requests (already listed). Stable Diffusion is optional
+# and installed separately via ComfyUI or stable-diffusion-webui.
+
+# --- Layer 8: Publish (TikTok + Instagram + YouTube) ---
+# YouTube requires google-api-python-client + google-auth-oauthlib
+google-api-python-client>=2.150.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+google-auth>=2.34.0
+
+# --- Layer 9: Analytics ---
+# All analytics use requests (no extra libs needed).
+
+# --- Layer 10: Whop ---
+# Whop CLI is installed separately via: curl -fsSL https://whop.com/install.sh | sh
+# Whop HTTP API uses requests.
+
+# --- Cross-cutting ---
+requests>=2.32.5
+httpx>=0.28.1
+python-dotenv>=1.0.0
+PyYAML>=6.0
+tqdm>=4.67.0
+
+# --- Stable Diffusion (optional — for AI B-roll generation) ---
+# Install only if you want local AI image generation:
+# pip install diffusers transformers accelerate torch
+# diffusers>=0.30.0
+# transformers>=4.44.0
+# accelerate>=0.34.0
+
+# --- MediaPipe (optional — for face/body tracking for B-roll) ---
+# mediapipe>=0.10.14
